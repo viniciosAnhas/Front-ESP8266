@@ -15,13 +15,18 @@
 
         </head>
 
-        <body>
+        <body onload="GetArduinoInputs()">
 
             <main>
 
                 <div class="panel">
 
-
+                    <canvas id="an_gauge_1" data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge"
+                    data-min-value="0" data-max-value="100"
+                    data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(temperature);}, 200);"></canvas>
+            <canvas id="an_gauge_2" data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge"
+                    data-min-value="0" data-max-value="100"
+                    data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(humidity);}, 200);"></canvas>
 
                 </div>
 
