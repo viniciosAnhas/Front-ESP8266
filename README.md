@@ -3,7 +3,7 @@
 ### Nesse projeto iremos apresentar os dados recebidos pela API-ESP8266 e apresentar em uma página web em tempo real.
 ___
 
-# Sumario
+# Sumário
 
 * [Softwares](#Softwares)
 * [Como utilizar](#Como-utilizar)
