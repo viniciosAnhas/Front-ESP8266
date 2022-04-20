@@ -57,7 +57,7 @@ let humidity = 0;
             }; Gauge.initialized = !1;
     
             (function () {
-                var b = document, l = b.getElementsByTagName("head")[0], q = -1 != navigator.userAgent.toLocaleLowerCase().indexOf("msie"), v = "@font-face {font-family: 'Led';src: url('../fonts/digital-7 (mono)." + (q ? "eot" : "ttf") + "');}", k = b.createElement("style"); k.type = "text/css"; if (q) l.appendChild(k), l = k.styleSheet, l.cssText = v; else { try { k.appendChild(b.createTextNode(v)) } catch (e) { k.cssText = v } l.appendChild(k); l = k.styleSheet ? k.styleSheet : k.sheet || b.styleSheets[b.styleSheets.length - 1] } var g = setInterval(function () {
+                var b = document, l = b.getElementsByTagName("head")[0], q = -1 != navigator.userAgent.toLocaleLowerCase().indexOf("msie"), v = "@font-face {font-family: 'Led';src: url('./fonts/digital-7." + (q ? "eot" : "ttf") + "');}", k = b.createElement("style"); k.type = "text/css"; if (q) l.appendChild(k), l = k.styleSheet, l.cssText = v; else { try { k.appendChild(b.createTextNode(v)) } catch (e) { k.cssText = v } l.appendChild(k); l = k.styleSheet ? k.styleSheet : k.sheet || b.styleSheets[b.styleSheets.length - 1] } var g = setInterval(function () {
                     if (b.body) {
                         clearInterval(g);
                         var e = b.createElement("div"); e.style.fontFamily = "Led"; e.style.position = "absolute"; e.style.height = e.style.width = 0; e.style.overflow = "hidden"; e.innerHTML = "."; b.body.appendChild(e); setTimeout(function () { Gauge.initialized = !0; e.parentNode.removeChild(e) }, 250)
@@ -81,9 +81,9 @@ let humidity = 0;
             }); window.Gauge = Gauge;
 
 
-            function GetArduinoInputs() {
+            function fetchDHT11() {
                 
-                const url = `http://192.168.15.200/sensor`
+                const url = ``
 
                 fetch(url)
                 .then(response => response.json())
@@ -95,6 +95,6 @@ let humidity = 0;
                 
                 })
 
-                setTimeout('GetArduinoInputs()', 5000);
+                setTimeout('fetchDHT11()', 5000);
             
             }
