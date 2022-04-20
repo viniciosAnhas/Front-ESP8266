@@ -21,7 +21,7 @@ ___
 + Vá ate a função <b>fetchDHT11</b>, e preencha a variável <b>url</b> com o endereço da nossa API, o mesmo endereço que utilizamos no Postman;
 + Salve o arquivo e execute o index.html;
 
-<img src="./print/tela.PNG">
+<img src="./print/tela.png">
 
 ___
 
