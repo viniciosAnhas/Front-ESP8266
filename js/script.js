@@ -83,7 +83,7 @@ let humidity = 0;
 
             function fetchDHT11() {
                 
-                const url = ``
+                const url = `http://monitoringesp8266.zapto.org:5765/sensor`
 
                 fetch(url)
                 .then(response => response.json())
